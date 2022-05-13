@@ -1,0 +1,49 @@
+<%= render "pages/nav" %>
+<div class="curso-principal">
+
+  <h1>Cursos</h1>
+  <div class="curso-contenedor-botones">
+    <%= link_to "Adicionar", new_curso_path %>
+    <%= link_to "back", pages_path %>
+  </div>
+    <% @cursos.each do |curso| %>
+      <div class="curso-map">
+         <hr/>
+          <div id="textfield-curso-mostrar">
+            <label id="nombre-curso"><%= curso.name %></label>
+            <label>Grado: <%= curso.grado %></label>
+            <button id="boton-editar">
+              Editar
+            </button>
+          </div>
+
+          <div id="textfield-curso-editar" class="textfield-curso-editar">
+            <%= form_with model: curso do |form| %>
+              <div >
+                <%= form.text_field :name %>
+                <% curso.errors.full_messages_for(:name).each do |message| %>
+                  <div><%= message %></div>
+                <% end %>
+              </div>
+
+              <div id="boton-guardar">
+                <%= form.submit %>
+              </div>
+            <% end %>
+          </div>
+        <div>
+          <%= link_to 'students', curso %>
+          <%= link_to "Eliminar", curso_path(curso), data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+          } %>
+
+
+
+        </div>
+      </div>
+
+    <% end %>
+</div>
+<button onclick="uniToggleShow()">prueba1</button>
+<button onclick="uniToggleHide()">prueba2</button>

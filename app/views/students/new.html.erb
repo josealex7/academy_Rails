@@ -1,0 +1,19 @@
+<h2>Add a Student:</h2>
+<%= form_with model: [ @curso, @curso.students.build ] do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :genero %><br>
+    <%= form.text_area :genero %>
+  </p>
+  <p>
+    <%= form.label :edad %><br>
+    <%= form.text_area :edad %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

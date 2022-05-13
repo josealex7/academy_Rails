@@ -1,0 +1,24 @@
+
+<div class="divContenedorNav">
+  <header class="headerNav">
+    <nav class="NavHeader">
+      <ul class="ul-nav">
+        <li class="link">
+          <%= link_to "Administracion de estudiantes", cursos_path %>
+        </li>
+        <li class="link">Mis cursos</li>
+        <li class="link">Mi cuenta</li>
+        <li class="link">
+          <%= link_to "Sobre Nosotros", about_path %>
+        </li>
+        <li class="link1">
+          <%= button_to(
+                "Cerrar Sesion",
+                destroy_user_session_path,
+                method: :delete
+              ) %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>

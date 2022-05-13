@@ -1,0 +1,40 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+@import 'navbar';
+@import 'home';
+@import "curso";
+
+.contenedor-principal {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-registro {
+  margin: 30vh auto;
+  border-radius: 10%;
+  width: 500px;
+  display: inline-block;
+  background-color: rgba(87, 210, 195, 0.7);
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+.contenedor-registro h2 {
+  margin: 25px;
+  color: black;
+  font-size: 35px;
+}
+
+.contenedor-registro form input {
+  width: 20em;
+  margin: 8px;
+  text-align: center;
+}
+
+.contenedor-registro form textarea {
+  margin-top: 13px;
+  resize: none;
+  text-align: center;
+}
+

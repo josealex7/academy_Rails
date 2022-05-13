@@ -1,0 +1,21 @@
+<% provider = request[:provider] ? User.find(request[:provider]).username : "" %>
+<% logoboy = "boy.jpg" %>
+<% logorobot = "robot.jpg" %>
+<div class="home-principal">
+  <div class="home-div">
+    <div class="home-div-superior">
+      <h4>Administracion de estudiantes</h4>
+    </div>
+    <%= link_to (cursos_path) do %>
+      <%= image_tag("#{logoboy}", class: "img-responsive", style: "max-width: 80%; margin: auto;") %>
+    <% end %>
+  </div>
+  <div class="home-div">
+    <div class="home-div-superior">
+      <h4>Mis cursos</h4>
+    </div>
+    <%= link_to (about_path) do %>
+      <%= image_tag("#{logorobot}", class: "img-responsive", style: "max-width: 80%; margin: auto;") %>
+    <% end %>
+  </div>
+</div>

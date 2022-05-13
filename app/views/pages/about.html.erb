@@ -1,0 +1,93 @@
+<%= render "nav" %>
+<% @page_title = t("teacher_dashboard.about_us") %>
+<div class="container">
+  <div class="row top">
+    <div class="col-xs-12 col-md-12">
+      <div class="bar-title">
+        <%= t("teacher_dashboard.about_us") %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="panel-default">
+        “IUNGO” es una palabra en latín que traducida al español significa conexión. Hacemos referencia a las conexiones neuronales que se desarrollan en nuestros estudiantes al desarrollar su pensamiento computacional, pensamiento matemático y de diseño.
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="panel-default">
+        <%= image_tag("about_us.png", class: "img-responsive") %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="bar-title">
+        <%= t("common.contact_us") %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8 col-md-8">
+      <div class="panel-default">
+        <label for="txt">
+          <%= t("footer.contact.index") %>
+        </label>
+        <br/>
+        <br/>
+        <label>
+          <%= t("footer.contact.telephone") %>
+        </label>
+        <br/>
+        <label>
+          <%= t("footer.contact.whatsapp") %>
+        </label>
+        <br/>
+        <label>
+          <%= t("footer.contact.email") %>
+        </label>
+        <br/>
+        <label>
+          <%= t("footer.contact.info") %>
+        </label>
+        <br/>
+        <label>
+          <%= t("footer.contact.support") %>
+        </label>
+        <br/>
+        <label>
+          <%= t("footer.contact.support_pedagogical") %>
+        </label>
+        <br/>
+      </div>
+    </div>
+    <div class="col-xs-4 col-md-4 text-center">
+      <%= image_tag("preguntas.png", class: "img-responsive") %>
+      <div class="panel-body"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="bar-title">
+        <%= t("footer.credits") %>
+      </div>
+      <div class="panel-default">
+        <br/>
+        <div class="text-center">
+          <label for="txt">
+            <%= t("footer.help_from_html_old") %>
+          </label>
+        </div>
+        <br/>
+      </div>
+      <div class="panel-body"></div>
+      <div class="col-sm-12 text-center">
+        <div>
+          <%= link_to t("crud.back"), :back , class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

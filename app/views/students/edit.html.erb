@@ -1,0 +1,33 @@
+<h2>Update a Student:</h2>
+
+<%= form_with(model: @student , url: curso_student_path(@student), method: "patch") do |form| %>
+
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @curso.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :genero %><br>
+    <%= form.text_field :genero %><br>
+    <% @curso.errors.full_messages_for(:genero).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :edad %><br>
+    <%= form.text_field :edad %><br>
+    <% @curso.errors.full_messages_for(:edad).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>

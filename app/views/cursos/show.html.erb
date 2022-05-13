@@ -1,0 +1,29 @@
+<h1><%= @curso.name %></h1>
+
+<h2>Students</h2>
+<hr/>
+<% @curso.students.each do |student| %>
+  <hr/>
+  <p>
+    <strong>Nombre:</strong>
+    <%= student.name %>
+  </p>
+
+  <p>
+    <strong>Genero:</strong>
+    <%= student.genero %>
+  </p>
+  <p>
+    <strong>Edad:</strong>
+    <%= student.edad %>
+  </p>
+  <li><%= link_to "Actualizar estudiante", edit_curso_student_path(student) %></li>
+  <%= link_to "Destroy Student", [student.curso, student], data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %>
+  <hr/>
+<% end %>
+<hr/>
+<li><%= link_to "Nuevo estudiante", new_curso_student_path(@curso) %></li>
+<%= link_to "back", cursos_path %>

@@ -1,0 +1,9 @@
+<div>
+  <% if current_user.teacher? %>
+    <%= render partial: 'pages/nav' %>
+    <%= render partial: 'pages/home' %>
+  <% end %>
+  <% if current_user.admin? %>
+    <%= render partial: 'pages/admin' %>
+  <% end %>
+</div>
